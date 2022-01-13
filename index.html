@@ -1,0 +1,525 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>UBG</title>
+<meta name="viewport" content="width=device-width, intial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/responsive.css" />
+<link rel="stylesheet" type="text/css" href="vendore/bootstrap-4.0.0/dist/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="vendore/bootstrap-4.0.0/dist/css/bootstrap-grid.min.css"/>
+<link rel="stylesheet" type="text/css" href="fonts/stylesheet.css" />
+<link rel="stylesheet" type="text/css" href="vendore/fontawesome/css/all.min.css" />
+<link rel="stylesheet" type="text/css" href="vendore/OwlCarousel/dist/assets/owl.carousel.min.css" />
+<link rel="stylesheet" type="text/css" href="vendore/fancybox/dist/jquery.fancybox.min.css" />
+
+<script type="text/javascript" src="js/jquery-3.0.0.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="vendore/OwlCarousel/dist/owl.carousel.min.js"></script>
+<script type="text/javascript" src="vendore/fancybox/dist/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="js/customs.js"></script>
+<script type="text/javascript" src="vendore/bootstrap-4.0.0/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<main class="for_page">
+    <div class="page">
+        <header class="header">
+            <div class="container separator">
+                <div class="row">
+                    <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12">
+                        <a href="/" class="logo">
+                            <img src="img/logo.png" alt="UBG_logo" />
+                        </a>
+                    </div>
+                    <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12">
+                        <div class="dropdown">
+                            <button class="dropbtn">Подключение</button>
+                            <div class="dropdown-content">
+                                <a class="dropdown-item" href="#">Uber</a>
+                                <a class="dropdown-item" href="#">Bolt</a>
+                                <a class="dropdown-item" href="#">Uklon</a>
+                                <a class="dropdown-item" href="#">RegSat</a>
+                              </div>
+                            </div>
+
+                            <div class="dropdown">
+                                <button class="dropbtn">Наши услуги</button>
+                                <div class="dropdown-content">
+                                    <a class="dropdown-item" href="#">Аренда авто</a>
+                                    <a class="dropdown-item" href="#">Автострахование</a>
+                                    <a class="dropdown-item" href="#">GPS-мониторинг</a>
+                                    <a class="dropdown-item" href="#">Услуги СТО</a>
+                                  </div>
+                                </div>
+
+                             <div class="dropdown">
+                                 <button class="dropbtn">Подбор автомобиля</button>
+                                    <div class="dropdown-content">
+                                        <a class="dropdown-item" href="#">Авто с США</a>
+                                        <a class="dropdown-item" href="#">Авто из Европы</a>
+                                        <a class="dropdown-item" href="#">Авто с Кореи</a>
+                                        <a class="dropdown-item" href="#">Доставка авто</a>
+                                      </div>
+                             </div>
+
+                             <div class="dropdown">
+                                <button class="dropbtn">О нас</button>
+                                 <div class="dropdown-content">
+                                    <a class="dropdown-item" href="#">О компании</a>
+                                    <a class="dropdown-item" href="#">Отзывы</a>
+                                    <a class="dropdown-item" href="#">Партнерство</a>
+                                    <a class="dropdown-item" href="#">Контакты</a>
+                                </div>
+                            </div>
+                    </div>
+                </div> 
+            </div>
+        </header>
+        <section class="block1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <div class="uber_image">
+                        <img src="img/uber-block1.png" alt="taxi">
+                    </div>
+                    </div>
+
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <div class="joinus_block">
+                        <h2>Ты хочешь работать и быть независимым? </h2>
+                        <div class="joinus_text">Заполни форму и начни зарабатывать</div>
+                        <div class="joinus-form">
+                            <form action="mail.php" method="POST" id="joinform">
+                                <input type="text"  name="user_name" class="form-joinus" placeholder="Ваше Имя" required />
+                                <input type="text"  name="user_phone" class="form-joinus" placeholder="+38(0XX)XXX-XX-XX" required maxlength="19" />
+                                <button type="submit" class="btn_joinform" data-dismiss="modal">Отправить</button>
+                            </form>
+                        </div>
+
+                        <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Заполнить форму</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    <form id="form_driver">
+                                        <div class="row">
+                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                                <input type="text" id="formdriver-firstName" name="name" class="form-field" placeholder="Ваше Имя" required />
+                                            </div>
+                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                                <input type="text" id="formdriver-lastName" name="name" class="form-field" placeholder="Ваша Фамилия" required />
+                                            </div>
+                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                                <input type="text" id="formdriver-phone" name="phone" class="form-field" placeholder="+38(0XX)XXX-XX-XX" required maxlength="19" />
+                                            </div>
+                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                                <input type="text" id="formdriver-car" name="car" class="form-field" placeholder="Марка и модель авто" required />
+                                            </div>
+                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                                <input type="text" id="formdriver-carYear" name="carYear" class="form-field" placeholder="Год выпуска " required />
+                                            </div>
+                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                                <select id="formdriver-city" class="form-field" aria-label required style="padding-left:10px;" >
+                                                    <option value="Киев">Киев</option>
+                                                    <option value="Одесса">Одесса</option>
+                                                    <option value="Львов">Львов</option>
+                                                    <option value="Харьков">Харьков</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Отправить</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                             <!-- Modal -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="block2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <div class="joinus_block">
+                        <h2>UBG cоздает лучшие условия для Вас с 2016 года. Наши приемущества:</h2>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="box_benefits">
+                            <div class="img-box-benefits">
+                                <img src="img/cross_icon.png" alt="img" />
+                                </div>
+                            <div class="text-box-benefits">
+                                Помощь с разблокировкой аккаунта в любой службе.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="box_benefits">
+                            <div class="img-box-benefits">
+                                <img src="img/time_icon.png" alt="img" />
+                                </div>
+                            <div class="text-box-benefits">
+                                Работа в удобное для Вас время.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="box_benefits">
+                            <div class="img-box-benefits">
+                                <img src="img/percent-icon.jpeg" alt="img" />
+                                </div>
+                            <div class="text-box-benefits">
+                                Индивидуальные скидки для наших партнеров.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="box_benefits">
+                            <div class="img-box-benefits">
+                                <img src="img/help_icon.png" alt="img" />
+                                </div>
+                            <div class="text-box-benefits">
+                                Поддержка 24/7.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="box_benefits">
+                            <div class="img-box-benefits">
+                                <img src="img/money_icon.jpeg" alt="img" />
+                                </div>
+                            <div class="text-box-benefits">
+                                Бонус за привлечение новых партнеров.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="box_benefits">
+                            <div class="img-box-benefits">
+                                <img src="img/handshake_icon.jpeg" alt="img" />
+                                </div>
+                            <div class="text-box-benefits">
+                                Возможность работы на авто компании.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="review-carousel">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+                <div class="bg_review_carousel">
+                    <div class="bg_review_text">
+                        Почувствуй все плюсы с UBG в любой службе такси!
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12">
+            <div class="review_carousel_owl">
+                <div class="owl-carousel" id="review_carousel">
+                    <div class="item">
+                        <div class="owl_carousel_slide" style="background-image: url(img/didi.jpeg);">
+                            <div class="owl_carousel_text">Скоро подключение<br>Будь одним из первых вместе с UBG.</div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="owl_carousel_slide" style="background-image: url(img/pic_uber.jpeg);">
+                            <div class="owl_carousel_text">Подключайся к Uber с нами<br>UBG является официальным партнером Uber с 2016 года.</div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="owl_carousel_slide" style="background-image: url(img/pic_bolt.jpeg);">
+                            <div class="owl_carousel_text">Подключайся к Bolt с нами<br> и выводи свой баланс в любое <br> удобное для тебя время. </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="owl_carousel_slide" style="background-image: url(img/pic_uklon.png);">
+                            <div class="owl_carousel_text">Регистрируйся в Uklon с нами<br>и получай приоритетные заказы.</div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="owl_carousel_slide" style="background-image: url(img/pic_regsat.jpeg);">
+                            <div class="owl_carousel_text">Регистрируйся в RegSat с нами <br> и мы подключим любое твое авто.</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+            </div>
+        </section>
+        <section class="block3">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <div class="otzuvy">
+                            <h2>С нами работают даже самые <a href="https://www.youtube.com/channel/UC1yyrcUQX0y4sEkL4rQ_-wA/featured">"Богатые таксисты"</a></h2>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                        <div class="youtube" id="J1txA38o6U0" style="width: 500px; height: 281px;"></div>
+
+                    </div>
+
+                    <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                        <div class="youtube_text">
+                            Реальные люди, которые на своем опыте рассказывают как с обычного таксиста стать успешными владельцами бизнеса и
+                             зарабатывать деньги! Мы научим и все расскажем. Ты сможешь работать как на своем авто, так и на авто компании. 
+                         </div>
+                    </div>
+                             
+                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                             <div class="partership">
+                                 <h2>Партнерсво</h2>
+                             <div class="partership_text">У тебя есть автомобиль, но нет времени ездить в такси? Ты можешь стать нашим партнером и мы найдем лучшего водителя на твое авто. 
+                                А также ты получишь эксклюзивные условия сотрудничества для владельцев автопарков.
+                              </div> 
+                              <a href="#" class="btn-joinus" data-toggle="modal" data-target="#exampleModal">
+                                Стать партнером </a>
+    
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="block4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <h2>Наши услуги</h2>
+                    </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <div class="uslugi">
+                    <h3>Авто в аренду</h3>
+                    <div class="uslugi_text">
+                        Мы предлагаем выгодные условия аренды автомобиля для работы в такси. 
+                        Большой выбор машин и минимум забот.
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <div class="uslugi">
+                    <h3>Автострахование</h3>
+                    <div class="uslugi_text">
+                        Все виды автострахования. Широкий выбор компаний, лучшие цены, а также своевременное обновление документов в водительском аккаунте.
+                    </div>
+                    </div>
+                    </div>
+
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <div class="uslugi">
+                    <h3>GPS-мониторинг</h3>
+                    <div class="uslugi_text">
+                        Монтаж gps-трекеров, самые лучшие цены. Ваш автомобиль всегда будет под надежным контроллем.
+                    </div>
+                    </div>
+                 </div>
+
+                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <div class="uslugi">
+                    <h3>Услуги СТО</h3>
+                    <div class="uslugi_text">
+                        Наша станция техобслуживания предоставляет систему скидок для партнеров, а также весь перечень ремонтных работ, шиномонтаж, т/о, полная диагностика, капитальный ремонт двигателя и т.д.
+                    </div>
+                    </div>
+                 </div>
+                </div>
+                </div>
+        </section>
+
+        <section class="block5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-8 col-sm-12">
+                        <h2>Дополнительный доход</h2>
+                        <p>Работайте 2-3 часа в день в свободное время или берите заказы только по пути на основную работу.Бронируйте поезки заранее</p>
+                        <a href="#" class="btn-joinus" data-toggle="modal" data-target="#exampleModal">Подключиться</a>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-8 col-sm-12">
+                        <h2>Основная работа</h2>
+                        <p>Работа по 6-8 часов в удобное для Вас время дня или ночи. Мы поможем заработать максимум за минимум</p>
+                        <a href="#" class="btn-joinus" data-toggle="modal" data-target="#exampleModal">Подключиться</a>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-8 col-sm-12">
+                        <h2>Уже есть аккаунт?</h2>
+                        <p>Вы всегда можете сменить своего партнера и присоедениться к нам. <br> UBG входит в топ 10 самых крупных партнеров</p>
+                        <a href="#" class="btn-joinus" data-toggle="modal" data-target="#exampleModal">Сменить партнера</a>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="block6">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <div class="uber_image">
+                        <img src="img/uber_fishka.png" alt="skidki">
+                    </div>
+                    </div>
+
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <h2>Скидки для водителей</h2>
+                        <ul class="skidki">
+                            <li>Uber-Fishka карта лояльности предоставляет скидку на газ/бензин от ОККО</li>
+                            <li>ELIT автозапчасти. Скидка -24% </li>
+                            <li>магазини АЛЛО та allo.ua 10% балами за аксессуары </li>
+                            <li>ШипШина.Скидка от 5 до 15% на покупку шын, дисков, аккумуляторов</li>
+                            <li>SportLife.Спец цены на членство в клубе</li>
+                            <li>Скидки на все виды страхования включая автогражданку!</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="block7">
+            <div class="container">
+                <hr>
+                <div class="partner-company">
+                    <div class="company">
+                        <img src="img/company1.png" alt="company1"/>
+                    </div>
+
+                    <div class="company">
+                        <img src="img/company2.png" alt="company1"/>
+                    </div>
+                
+                    <div class="company">
+                        <img src="img/company3.png" alt="company1"/>
+                    </div>
+               
+                    <div class="company">
+                        <img src="img/company4.png" alt="company1"/>
+                    </div>
+    
+                    <div class="company">
+                        <img src="img/company5.png" alt="company1"/>
+                    </div>
+               
+                    <div class="company">
+                        <img src="img/company6.png" alt="company1"/>
+                    </div>
+               
+                    <div class="company">
+                        <img src="img/company7.png" alt="company1"/>
+                    </div>
+                </div>
+                <hr>
+                </div>
+        </section>
+        <section class="block8">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <h2>Города подключения</h2>
+                        <p>Киев</p>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <p>Одесса</p>
+                        <p>Львов</p>
+                        <p>Днепр</p>
+                    </div>
+
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <p>Харьков</p>
+                        <p>Винница</p>
+                        <p>Запорожье</p>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <section class="contact">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <div class="contact-block">
+                        <h2>Мы находимся здесь</h2>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.953097406345!2d30.36068821573171!3d50.46059807947673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cc9408701501%3A0x5cdd76df9b686bf0!2z0YPQuy4g0KHQtdC80LDRiNC60L4sIDEzLCDQmtC40LXQsiwgMDMxNDI!5e0!3m2!1sru!2sua!4v1634659444573!5m2!1sru!2sua" 
+                        width="300" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <div class="contact-block">
+                        <h2>Наши контакты</h2>
+                        <a href="https://goo.gl/maps/YrQLZvTAn3p3QJTFA">Киев, ул.Семашко 13</a><br>
+                        <a href="tel:+380637661512" class="phone">+38(063) 766-15-12</a><br>
+                        <a href="tel:+380972810869" class="phone">+38(097) 281-08-69</a><br>
+                        <a href="mailto:maxbat1988@gmail.com" class="mail">ubg.com@ukr.net</a>
+
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <div class="contact-block">
+                        <h2>Подключаем к</h2>
+                        <a class="partners" href="#">Uber</a><br>
+                        <a class="partners" href="#">Bolt</a><br>
+                        <a class="partners" href="#">Uklon</a><br>
+                        <a class="partners" href="#">RegSat</a><br>
+                        <a class="partners" href="#">DiDi</a>
+                       
+                    </div>
+                </div>
+
+            </div>
+            </div>
+            
+        </section>
+        <section class="footer_logo">
+            <div class="container">
+                <div class="row">
+
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <a href="/" class="footer_logo">
+                        <img src="img/UBG_mini_logo.png" alt="UBG_logo" />
+                    </a>
+                    <p class="copyright">Copyright &copy; 2016 UBG. Все права защищены</p>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    </footer>
+</main>
+</body>
+</html>
